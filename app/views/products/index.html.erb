@@ -11,7 +11,11 @@ $(function(){
     $.get("/products/" + id + "/description", function(data){
       $("#description-" + id).text(data);
       $.get("/products/" + id + "/inventory", function(data){
-        $("#inventory-" + id).text(data);
+        if (data){
+          $("#inventory-" + id).text("Available");
+        } else {
+          $("#inventory-" + id).text("Sold Out");
+        }
       })
     })
   })
