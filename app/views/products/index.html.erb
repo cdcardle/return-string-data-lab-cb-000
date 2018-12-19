@@ -1,12 +1,5 @@
 <h2>Products</h2>
 
-<ol>
 <% @products.each do |product| %>
-  <li>
-    <h4><%= product.name %></h4>
-    <p><%= truncate product.description %></p>
-  </li>
+  <%= render partial: 'product', locals: {product: product} %>
 <% end %>
-</ol>
-
-<button class="js-more" data-id="<%= @product.id %>">More...</button>
