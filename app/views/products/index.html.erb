@@ -8,7 +8,7 @@
 $(function(){
   $(".js-more").on("click", function(){
     const id = $(this).data("id");
-    $.get("/prducts/" + id + "/description", function(data){
+    $.get("/products/" + id + "/description", function(data){
       alert(data);
     })
   })
