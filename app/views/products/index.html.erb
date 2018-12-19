@@ -9,9 +9,9 @@ $(function(){
   $(".js-more").on("click", function(){
     const id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data){
-      console.log(data);
+      $("#description-" + id).text(data);
       $.get("/products/" + id + "/inventory", function(data){
-        console.log(data);
+        $("#inventory-" + id).text(data);
       })
     })
   })
