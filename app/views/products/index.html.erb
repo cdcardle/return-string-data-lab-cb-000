@@ -1,1 +1,10 @@
-<h2>This is products/index</h2>
+<h2>Products</h2>
+
+<ol>
+<% @products.each do |product| %>
+  <li>
+    <h4><%= product.name %></h4>
+    <p><%= truncate product.description %></p>
+  </li>
+<% end %>
+</ol>
