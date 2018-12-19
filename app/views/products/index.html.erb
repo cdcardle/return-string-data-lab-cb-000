@@ -11,6 +11,9 @@ $(function(){
     $.get("/products/" + id + "/description", function(data){
       alert(data);
     })
+    $.get("/products/" + id + "/inventory", function(data){
+      alert(data);
+    })
   })
 })
 </script>
