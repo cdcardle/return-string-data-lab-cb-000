@@ -1,10 +1,10 @@
 <h2>Create Product</h2>
 
 <%= form_for :product do |f| %>
-  <%= f.text_field :name %><br>
-  <%= f.number_field :price %><br>
-  <%= f.text_area :description %><br>
-  <%= f.number_field :inventory %><br>
+  Name: <%= f.text_field :name %><br>
+  Price: <%= f.number_field :price %><br>
+  Description: <%= f.text_area :description %><br>
+  Inventory: <%= f.number_field :inventory %><br>
 
   <%= f.submit "Create Product" %>
 <% end %>
