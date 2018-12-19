@@ -10,9 +10,9 @@ $(function(){
     const id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data){
       console.log(data);
-      // $.get("/products/" + id + "/inventory", function(data){
-      //   console.log(data);
-      // })
+      $.get("/products/" + id + "/inventory", function(data){
+        console.log(data);
+      })
     })
     // $.get("/products/" + id + "/inventory", function(data){
     //   alert(data);
